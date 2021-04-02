@@ -23,22 +23,7 @@ var db *gorm.DB
 var err error
 
 func main() {
-	// // load environment variables
-
-	// os.Setenv("HOST", "localhost")
-	// os.Setenv("DBPORT", "5432")
-	// os.Setenv("USER", "postgres")
-	// os.Setenv("NAME", "feedback")
-	// os.Setenv("PASSWORD", "postgres")
-	// host := os.Getenv("HOST")
-	// dbPort := os.Getenv("DBPORT")
-	// user := os.Getenv("USER")
-	// dbName := os.Getenv("NAME")
-	// password := os.Getenv("PASSWORD")
-
-	// // database connection string
-	// dbURI := fmt.Sprintf("host=%s user=%s dbname=%s sslmode=disable password=%s port=%s", host, user, dbName, password, dbPort)
-
+	// db connection string
 	dbURI := "postgres://tygpcistkwmqzq:08c0da8860c737732bccc39f990d72a98dfdb955461a224cce28b40af8852214@ec2-107-22-245-82.compute-1.amazonaws.com:5432/dek7e8hfvjod9o"
 
 	// open connection to db
