@@ -24,7 +24,7 @@ var err error
 
 func main() {
 	// db connection string
-	dbURI := "postgres://tygpcistkwmqzq:08c0da8860c737732bccc39f990d72a98dfdb955461a224cce28b40af8852214@ec2-107-22-245-82.compute-1.amazonaws.com:5432/dek7e8hfvjod9o"
+	dbURI := "postgres://mrefuzdezkdqil:d07ad6986d8d15985a35cf47ab018d1d6bd228f9c42fa75f97f12b8a606e5b8a@ec2-3-233-43-103.compute-1.amazonaws.com:5432/d2vcvaemk0fbjn"
 
 	// open connection to db
 	db, err = gorm.Open("postgres", dbURI)
@@ -42,7 +42,7 @@ func main() {
 
 	router := handleRequests()
 
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":80", router))
 }
 
 func getResponses(w http.ResponseWriter, r *http.Request) {
