@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
@@ -42,7 +43,7 @@ func main() {
 
 	router := handleRequests()
 
-	log.Fatal(http.ListenAndServe(":49133", router))
+	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), router))
 }
 
 func getResponses(w http.ResponseWriter, r *http.Request) {
