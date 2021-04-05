@@ -64,9 +64,14 @@ func createResponse(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func homePage(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "homepage endpoint reached")
+}
+
 func handleRequests() *mux.Router {
 	router := mux.NewRouter()
 
+	router.HandleFunc("/", homePage)
 	router.HandleFunc("/responses", getResponses).Methods("GET")
 	router.HandleFunc("/create/response", createResponse).Methods("POST")
 
