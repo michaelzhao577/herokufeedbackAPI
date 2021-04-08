@@ -24,9 +24,6 @@ var db *gorm.DB
 var err error
 
 func main() {
-	// db connection string
-	dbURI := "postgres://mrefuzdezkdqil:d07ad6986d8d15985a35cf47ab018d1d6bd228f9c42fa75f97f12b8a606e5b8a@ec2-3-233-43-103.compute-1.amazonaws.com:5432/d2vcvaemk0fbjn"
-
 	// open connection to db
 	db, err = gorm.Open("postgres", os.Getenv("DATABASE_URL"))
 	if err != nil {
